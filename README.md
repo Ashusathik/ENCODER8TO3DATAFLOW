@@ -1,5 +1,5 @@
-### ENCODER 8TO3 DATAFLOW Modelling
-
+### EXPT 5 ENCODER 8TO3 DATAFLOW Modelling
+DATE:26/10/2024
 **AIM:**
 
 To implement  Encoder 8 To 3 in Dataflow Modelling using verilog and validating their functionality using their functional tables
@@ -36,18 +36,27 @@ Figure 02  Encoder 8 * 3
 
 **Procedure**
 
-/* write all the steps invloved */
+ An encoder is a digital circuit that converts a set of binary inputs into a unique binary code. The binary code represents the position of the input and is used to identify the specific input that is active. Encoders are commonly used in digital systems to convert a parallel set of inputs into a serial code. The basic principle of an encoder is to assign a unique binary code to each possible input. For example, a 2-to-4 line encoder has 2 input lines and 4 output lines and assigns a unique 4-bit binary code to each of the 2 ^ 2 = 4 possible input combinations. The output of an encoder is usually active low, meaning that only one output is active (low) at any given time, and the remaining outputs are inactive (high). The active low output is selected based on the binary code assigned to the active input. There are different types of encoders, including priority encoders, which assign a priority to each input, and binary- weighted encoders, which use a binary weighting system to assign binary codes to inputs. In summary, an encoder is a digital circuit that converts a set of binary inputs into a unique binary code that represents the position of the input. Encoders are widely used in digital systems to convert parallel inputs into serial codes. An Encoder is a combinational circuit that performs the reverse operation of a Decoder. It has a maximum of 2 ^ n input lines and 'n' output lines, hence it encodes the information from 2^n inputs into an n-bit code. It will produce a binary code equivalent to the input, which is active High. Therefore, the encoder encodes 2^n input lines with 'n' bits
 
-**PROGRAM**
+**PROGRAM
+module encoder (a, b, c, y0, y1, y2, y3,y4, y5,y6,y7);
+input yo, y1, y2,y3,y4, y5, y6, y7;
+output a,b,c;
+assign a= (y4 y5 | y6 | y7);
+assign b= (y2 y3 | y6 | y7);
+assign c= (y1 | y3 | y5 | y7);
 
-/* Program for Encoder 8 To 3 in Dataflow Modelling and verify its truth table in quartus using Verilog programming. 
-
-Developed by: RegisterNumber:
+Developed by:ASHRATHI S RegisterNumber:24900260
 */
 
-**RTL LOGIC FOR Encoder 8 To 3 in Dataflow Modelling**
+**RTL LOGIC FOR Encoder 8 To 3 in Dataflow Modelling
 
-**TIMING DIGRAMS FOR Encoder 8 To 3 in Dataflow Modelling**
+![Screenshot 2024-12-26 224148](https://github.com/user-attachments/assets/c69ce8e0-e05e-4284-823e-2f9730b163d4)
+
+**TIMING DIGRAMS FOR Encoder 8 To 3 in Dataflow Modelling
+
+![Screenshot 2024-12-26 224247](https://github.com/user-attachments/assets/4c5261aa-1eb3-44cf-bf25-c56cdbbbc826)
+
 
 **RESULTS**
 
